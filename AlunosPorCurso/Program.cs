@@ -61,6 +61,7 @@ namespace AlunosPorCurso
             int opcao = 1;
             while (opcao != 5)
             {
+                Console.WriteLine();
                 Console.WriteLine("1 - Quantidade de alunos por curso:");
                 Console.WriteLine("2 - Quantidade total de alunos:");
                 Console.WriteLine("3 - Listar alunos por curso:");
@@ -86,8 +87,14 @@ namespace AlunosPorCurso
                         Console.WriteLine("2 - B");
                         Console.WriteLine("3 - C");
                         Console.WriteLine("4 - Para sair.");
-                        opcao2 = int.Parse(Console.ReadLine());
-                        opcao = 1;
+                        try
+                        {
+                            opcao2 = int.Parse(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
                         if (opcao2 == 1)
                         {
                             Console.WriteLine("O curso escolhido possui: " + A.Count + " alunos.");
@@ -105,8 +112,52 @@ namespace AlunosPorCurso
 
                 if (opcao == 2)
                 {
+                    Console.WriteLine();
                     int qteTotal = A.Count + B.Count + C.Count;
                     Console.WriteLine("Temos o total de " + qteTotal + " alunos.");
+                }
+
+                if (opcao == 3)
+                {
+                    int opcao2 = 1;
+                    while (opcao2 != 4)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Digite o curso desejado:");
+                        Console.WriteLine("1 - A");
+                        Console.WriteLine("2 - B");
+                        Console.WriteLine("3 - C");
+                        Console.WriteLine("4 - Para sair.");
+                        try
+                        {
+                            opcao2 = int.Parse(Console.ReadLine());
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        if (opcao2 == 1)
+                        {
+                            foreach (Aluno x in A)
+                            {
+                                Console.WriteLine(x);
+                            }
+                        }
+                        if (opcao2 == 2)
+                        {
+                            foreach (Aluno x in B)
+                            {
+                                Console.WriteLine(x);
+                            }
+                        }
+                        if (opcao2 == 3)
+                        {
+                            foreach (Aluno x in C)
+                            {
+                                Console.WriteLine(x);
+                            }
+                        }
+                    }
                 }
             }
         }

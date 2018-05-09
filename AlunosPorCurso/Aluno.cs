@@ -19,6 +19,9 @@ namespace AlunosPorCurso
             Alunos = new HashSet<Aluno>();
         }
 
-
+        public override string ToString()
+        {
+            return "Código: " + Codigo + ", aluno: " + Nome;
+        }
     }
 }
