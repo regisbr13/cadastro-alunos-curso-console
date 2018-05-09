@@ -80,6 +80,7 @@ namespace AlunosPorCurso
                     int opcao2 = 1;
                     while (opcao2 != 4)
                     {
+                        Console.WriteLine();
                         Console.WriteLine("Digite o curso desejado:");
                         Console.WriteLine("1 - A");
                         Console.WriteLine("2 - B");
@@ -100,6 +101,12 @@ namespace AlunosPorCurso
                             Console.WriteLine("O curso escolhido possui: " + C.Count + " alunos.");
                         }
                     }
+                }
+
+                if (opcao == 2)
+                {
+                    int qteTotal = A.Count + B.Count + C.Count;
+                    Console.WriteLine("Temos o total de " + qteTotal + " alunos.");
                 }
             }
         }
