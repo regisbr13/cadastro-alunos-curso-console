@@ -10,11 +10,13 @@ namespace AlunosPorCurso
     {
         public int Codigo { get; set; }
         public string Nome { get; set; }
+        public HashSet<Aluno> Alunos { get; set; }
         
         public Aluno(int codigo, string nome)
         {
             this.Codigo = codigo;
             this.Nome = nome;
+            Alunos = new HashSet<Aluno>();
         }
 
 

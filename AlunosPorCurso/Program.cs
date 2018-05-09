@@ -57,6 +57,51 @@ namespace AlunosPorCurso
                 aluno = new Aluno(cod, nome);
                 C.Add(aluno);
             }
+
+            int opcao = 1;
+            while (opcao != 5)
+            {
+                Console.WriteLine("1 - Quantidade de alunos por curso:");
+                Console.WriteLine("2 - Quantidade total de alunos:");
+                Console.WriteLine("3 - Listar alunos por curso:");
+                Console.WriteLine("4 - Listar total de alunos:");
+                Console.WriteLine("5 - Para sair.");
+                try
+                {
+                    opcao = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+                if (opcao == 1)
+                {
+                    int opcao2 = 1;
+                    while (opcao2 != 4)
+                    {
+                        Console.WriteLine("Digite o curso desejado:");
+                        Console.WriteLine("1 - A");
+                        Console.WriteLine("2 - B");
+                        Console.WriteLine("3 - C");
+                        Console.WriteLine("4 - Para sair.");
+                        opcao2 = int.Parse(Console.ReadLine());
+                        opcao = 1;
+                        if (opcao2 == 1)
+                        {
+                            Console.WriteLine("O curso escolhido possui: " + A.Count + " alunos.");
+                        }
+                        if (opcao2 == 2)
+                        {
+                            Console.WriteLine("O curso escolhido possui: " + B.Count + " alunos.");
+                        }
+                        if (opcao2 == 3)
+                        {
+                            Console.WriteLine("O curso escolhido possui: " + C.Count + " alunos.");
+                        }
+                    }
+                }
+            }
         }
     }
 }
