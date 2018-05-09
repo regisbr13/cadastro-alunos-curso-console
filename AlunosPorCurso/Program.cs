@@ -19,9 +19,9 @@ namespace AlunosPorCurso
 
             Console.WriteLine("Digite quantos alunos possuem o curso A:");
             n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine("Digite os dados do " + i + 1 + "° aluno:");
+                Console.WriteLine("Digite os dados do " + i + "° aluno:");
                 Console.Write("Código: ");
                 cod = int.Parse(Console.ReadLine());
                 Console.Write("Nome: ");
@@ -33,9 +33,9 @@ namespace AlunosPorCurso
             Console.WriteLine();
             Console.WriteLine("Digite quantos alunos possuem o curso B:");
             n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine("Digite os dados do " + i + 1 + "° aluno:");
+                Console.WriteLine("Digite os dados do " + i + "° aluno:");
                 Console.Write("Código: ");
                 cod = int.Parse(Console.ReadLine());
                 Console.Write("Nome: ");
@@ -47,9 +47,9 @@ namespace AlunosPorCurso
             Console.WriteLine();
             Console.WriteLine("Digite quantos alunos possuem o curso C:");
             n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine("Digite os dados do " + i + 1 + "° aluno:");
+                Console.WriteLine("Digite os dados do " + i + "° aluno:");
                 Console.Write("Código: ");
                 cod = int.Parse(Console.ReadLine());
                 Console.Write("Nome: ");
